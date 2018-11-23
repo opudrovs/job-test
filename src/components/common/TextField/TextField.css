@@ -1,0 +1,20 @@
+.textField {
+    padding: 0 1rem;
+    border-radius: 0.25rem;
+    border: 2px solid #f8f9fa;
+    box-shadow: none;
+    height: 3.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    background-color: #f8f9fa;
+    outline: none;
+}
+
+.textField:focus {
+    border-color: #5e1ead;
+}
+
+.textField::placeholder {
+    font-weight: 400;
+    opacity: 0.8;
+}

@@ -1,0 +1,18 @@
+.infoItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.text {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    word-break: break-all;
+}

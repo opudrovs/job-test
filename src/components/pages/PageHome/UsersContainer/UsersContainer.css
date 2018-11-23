@@ -1,0 +1,30 @@
+.usersContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.searchBar {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Large devices */
+@media (min-width: 992px) {
+    .searchBar {
+        margin-left: 2rem;
+    }
+}
+
+.loaderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 24rem);
+}
+
+.loader {
+    width: 1.5rem;
+    height: 1.5rem;
+}

@@ -1,0 +1,49 @@
+.header {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Large devices */
+@media (min-width: 992px) {
+    .header {
+        margin: 2rem;
+    }
+}
+
+.logoContainer {
+    display: none;
+}
+
+/* Large devices */
+@media (min-width: 992px) {
+    .logoContainer {
+        display: block;
+        background-color: #333;
+        padding: 1.5rem;
+        border-radius: 50%;
+        align-self: center;
+    }
+}
+
+.logo {
+    width: 4rem;
+    height: 4rem;
+}
+
+.instructions {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Large devices */
+@media (min-width: 992px) {
+    .instructions {
+        margin-left: 2rem;
+    }
+}
+
+.instructionsTitle {
+    font-size: 2.2rem;
+    color: #5e1ead;
+}

@@ -1,0 +1,26 @@
+.usersContainer {
+    width: 50%;
+}
+
+/* Large devices */
+@media (min-width: 992px) {
+    .usersContainer {
+        margin-left: 10%;
+        margin-top: 3rem;
+    }
+}
+
+.userInfo {
+    position: fixed;
+    width: 50%;
+    right: 0;
+    top: 0;
+}
+
+/* Large devices */
+@media (min-width: 992px) {
+    .userInfo {
+        width: 30%;
+        right: 10%;
+    }
+}
