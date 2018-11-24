@@ -44,7 +44,8 @@
     border: 4px solid #fff;
     width: 42%;
     height: 56%;
-    align-self: center;
+    left: 29%;
+    bottom: 22%;
 }
 
 /* Medium devices */
