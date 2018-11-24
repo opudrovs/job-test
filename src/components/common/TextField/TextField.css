@@ -14,7 +14,20 @@
     border-color: #5e1ead;
 }
 
-.textField::placeholder {
+.textField::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.textField::-moz-placeholder { /* Firefox 19+ */
+    font-weight: 400;
+}
+
+.textField:-moz-placeholder { /* Firefox 18- */
+    font-weight: 400;
+}
+
+.textField:-ms-input-placeholder { /* IE 10+ */
     font-weight: 400;
     opacity: 0.8;
 }
