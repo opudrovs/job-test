@@ -17,7 +17,7 @@ const TextField = ({
 }) => {
     let inputProps = {};
     if (maxLength) {
-        inputProps['maxLength'] = maxLength;
+        inputProps.maxLength = maxLength;
     }
 
     return (

@@ -3,23 +3,32 @@ import PropTypes from 'prop-types';
 
 import InfoItem from './InfoItem/InfoItem';
 
-import UtilsUser from 'utils/UtilsUser';
+import { composeFullName, composeAddress } from 'utils/UtilsUser';
+import { sanitizeString } from 'utils/UtilsString';
 
 import styles from './UserInfo.css';
 
 const UserInfo = ({ user }) => {
-    let fullName = user ? UtilsUser.fullName(user) : '';
+    const fullName = composeFullName(user);
 
     const items = user
-    ?
-    [
-        {label: 'Name', text: fullName, style: { textTransform: 'capitalize' }, classNames: [styles.itemName]},
-        {label: 'Email Address', text: user.email},
-        {label: 'Phone Number', text: user.cell},
-        {label: 'Address', text: UtilsUser.address(user), style: { textTransform: 'capitalize' }},
-    ]
-    :
-    [];
+        ?
+        [
+            { label: 'Name', text: fullName, style: { textTransform: 'capitalize' }, classNames: [styles.itemName] },
+            { label: 'Email Address', text: sanitizeString(user.email) },
+            { label: 'Phone Number', text: sanitizeString(user.cell) },
+            { label: 'Address', text: composeAddress(user), style: { textTransform: 'capitalize' } },
+        ]
+        :
+        [];
+
+    const userHasLargePicture = user && user.picture && user.picture.large;
+    const largePictureUrl = userHasLargePicture ? user.picture.large : '' ;
+    const backgroundDivStyle = {};
+
+    if (userHasLargePicture) {
+        backgroundDivStyle.backgroundImage = `url(${largePictureUrl})`;
+    }
 
     return (
         <div className={`${styles.userInfo}${user ? '' : ` ${styles.hidden}`}`}>
@@ -28,22 +37,24 @@ const UserInfo = ({ user }) => {
                 &&
                 <Fragment>
                     <div className={styles.portraitContainer}>
-                        <div className={styles.portraitBackground} style={{ backgroundImage: `url(${user.picture.large})` }}>
-
-                        </div>
+                        <div className={styles.portraitBackground}
+                             style={backgroundDivStyle}
+                        />
+                        {userHasLargePicture
+                        &&
                         <img
-                            src={user.picture.large}
+                            src={largePictureUrl}
                             title={fullName}
                             alt={fullName}
                             className={styles.portrait}
-                        />
+                        />}
                         <span className={styles.name}>{fullName}</span>
                         <span className={styles.additionalInfo}>{user.cell}</span>
                     </div>
                     <div className={styles.itemsContainer}>
-                        {items.map(element =>
+                        {items.map((element, index) =>
                             <InfoItem
-                                key={element.label}
+                                key={`item ${index}`}
                                 label={element.label}
                                 text={element.text}
                                 style={element.style}

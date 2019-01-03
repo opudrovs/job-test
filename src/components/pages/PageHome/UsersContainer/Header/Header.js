@@ -5,7 +5,7 @@ import styles from './Header.css';
 import logoImage from 'assets/images/logo.svg';
 
 const Header = () => {
-    let title = 'Test project logo';
+    const title = 'Test project logo';
     return (
         <div className={styles.header}>
             <div className={styles.logoContainer}>
