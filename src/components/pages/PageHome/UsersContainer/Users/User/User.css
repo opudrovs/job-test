@@ -1,5 +1,5 @@
 .spacing {
-    flex: 0 100%;
+    width: 100%;
     box-sizing: border-box;
     padding: 1rem 1rem;
 }
@@ -7,7 +7,7 @@
 /* Large devices */
 @media (min-width: 992px) {
     .spacing {
-        flex: 0 50%;
+        width: 50%;
     }
 }
 
@@ -72,18 +72,19 @@
 }
 
 .name {
-    display: flex;
+    display: inline-block;
     justify-content: center;
-    flex-direction: column;
     text-align: center;
-    margin-left: 1rem;
+    margin: auto 1rem auto 2rem;
     text-transform: capitalize;
+    overflow:hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
 }
 
 /* Large devices */
 @media (min-width: 992px) and (max-width: 1199px) {
     .name {
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
 }
