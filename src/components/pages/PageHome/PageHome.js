@@ -33,6 +33,7 @@ class PageHome extends Component {
                 <div className={styles.userInfo}>
                     <UserInfo user={this.state.selectedUser} />
                 </div>
+
             </Fragment>
         );
     }

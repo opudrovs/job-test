@@ -1,5 +1,24 @@
 .usersContainer {
-    width: 50%;
+    width: 100%;
+    margin: 0;
+}
+
+/* Small devices */
+@media (min-width: 576px) {
+    .usersContainer {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Medium devices */
+@media (min-width: 768px) {
+    .usersContainer {
+        width: 50%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 /* Large devices */
@@ -15,6 +34,14 @@
     width: 50%;
     right: 0;
     top: 0;
+    display: none;
+}
+
+/* Medium devices */
+@media (min-width: 768px) {
+    .userInfo {
+        display: block;
+    }
 }
 
 /* Large devices */

@@ -3,6 +3,20 @@
     flex-direction: column;
 }
 
+/* Small devices */
+@media (min-width: 576px) {
+    .searchBar {
+        flex-direction: row;
+    }
+}
+
+/* Medium devices */
+@media (min-width: 768px) {
+    .searchBar {
+        flex-direction: column;
+    }
+}
+
 /* Large devices */
 @media (min-width: 992px) {
     .searchBar {
@@ -15,6 +29,20 @@
     align-self: center;
 }
 
+/* Small devices */
+@media (min-width: 576px) {
+    .caption {
+        margin-bottom: 0;
+    }
+}
+
+/* Medium devices */
+@media (min-width: 768px) {
+    .caption {
+        margin-bottom: 1rem;
+    }
+}
+
 /* Large devices */
 @media (min-width: 992px) {
     .caption {
@@ -23,14 +51,28 @@
 }
 
 .textField {
-    width: 8rem;
+    width: 16rem;
 }
 
 /* Small devices */
 @media (min-width: 576px) {
     .textField {
-        margin-left: 2rem;
+        margin-left: 1rem;
+    }
+}
+
+/* Medium device */
+@media (min-width: 768px) {
+    .textField {
+        margin-left: 0;
+    }
+}
+
+/* Large devices */
+@media (min-width: 992px) {
+    .textField {
+        margin-left: 1rem;
         margin-right: 1rem;
-        width: auto;
+        width: 14rem;
     }
 }
