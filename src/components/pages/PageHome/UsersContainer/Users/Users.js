@@ -12,7 +12,7 @@ const Users = ({
     <div className={styles.users}>
         {selectableUsers.map((element, index) =>
             <User
-                key={`key ${index}`}
+                key={`user ${index}`}
                 selectableUser={element}
                 toggleUserSelected={toggleUserSelected}
             />

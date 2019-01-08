@@ -82,7 +82,7 @@
 }
 
 /* Large devices */
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199px) {
     .name {
         margin-left: 2rem;
     }
