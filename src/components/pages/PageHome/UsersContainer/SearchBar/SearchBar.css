@@ -46,15 +46,15 @@
     width: 16rem;
 }
 
-/* Small devices */
-@media (min-width: 576px) {
+/* Small devices and Large+ devices */
+@media (min-width: 576px) and (max-width: 767px), (min-width: 992px) {
     .textField {
         margin-left: 1rem;
     }
 }
 
 /* Medium devices  */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
     .textField {
         margin-left: 0;
     }
@@ -63,8 +63,13 @@
 /* Large devices */
 @media (min-width: 992px) {
     .textField {
-        margin-left: 1rem;
         margin-right: 1rem;
+    }
+}
+
+/* Only large devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .textField {
         width: 14rem;
     }
 }
