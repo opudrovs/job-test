@@ -25,26 +25,18 @@
 }
 
 .caption {
-    margin-bottom: 1rem;
     align-self: center;
 }
 
-/* Small devices */
-@media (min-width: 576px) {
-    .caption {
-        margin-bottom: 0;
-    }
-}
-
-/* Medium devices */
-@media (min-width: 768px) {
+/* Extra small and Medium devices */
+@media (max-width: 575px), (min-width: 768px) and (max-width: 991px) {
     .caption {
         margin-bottom: 1rem;
     }
 }
 
-/* Large devices */
-@media (min-width: 992px) {
+/* Small and Large+ devices */
+@media (min-width: 576px) and (max-width: 767px), (min-width: 992px) {
     .caption {
         margin-bottom: 0;
     }
@@ -61,7 +53,7 @@
     }
 }
 
-/* Medium device */
+/* Medium devices  */
 @media (min-width: 768px) {
     .textField {
         margin-left: 0;
