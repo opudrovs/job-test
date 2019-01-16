@@ -60,7 +60,6 @@ class UsersContainer extends Component {
 
     toggleUserSelected(userIndex) {
         const users = this.state.selectableUsers
-            .slice()
             .map((element, index) => {
                 return { ...element, isSelected: index === userIndex ? !element.isSelected : false };
             });
