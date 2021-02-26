@@ -22,7 +22,7 @@ export function composeAddress(user) {
 
     let parts = [];
     if (location.street) {
-        parts.push(location.street);
+        parts.push(`${location.street.number} ${location.street.name}`);
     }
     if (location.city) {
         parts.push(location.city);

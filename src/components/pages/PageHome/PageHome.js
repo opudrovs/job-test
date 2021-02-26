@@ -20,7 +20,7 @@ class PageHome extends Component {
 
     selectUser(user) {
         this.setState({
-            selectedUser: user || null
+            selectedUser: user
         });
     }
 
